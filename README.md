@@ -1,7 +1,7 @@
 
 # Dynamic Pokémon Explorer App
 
-I Build a Pokémon Explorer application where users can browse, search, and view information about different Pokémon dynamically. The app will use React Router for navigation and integrate with a public API to fetch Pokémon data.
+I Build a Pokémon Explorer application where users can browse, search, and view information about different Pokémon dynamically. The app used React Router for navigation and integrate with a public API to fetch Pokémon data.
 
 
 ## Tech Stack
@@ -12,7 +12,6 @@ I Build a Pokémon Explorer application where users can browse, search, and view
 
 
 ## Features
-
 - Search Bar
 - AI
 - Pagination
