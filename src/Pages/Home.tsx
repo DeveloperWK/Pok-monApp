@@ -24,6 +24,7 @@ const Home: React.FC = () => {
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [home, setHome] = useState(false);
   const API_URL = "https://pokeapi.co/api/v2/pokemon";
   const fetchPokemon = async () => {
     try {
@@ -52,6 +53,7 @@ const Home: React.FC = () => {
       setLoading(false);
     } finally {
       setLoading(false);
+      setHome(false);
     }
   };
   const handleNextPage = async () => {
@@ -177,6 +179,7 @@ const Home: React.FC = () => {
     setPokemon(filteredPokemon);
     setSearch("");
     setLoading(false);
+    setHome(true);
   };
   // if (error) {
   //   toast.error(" ❌ Pokemon not found", {
@@ -240,6 +243,15 @@ const Home: React.FC = () => {
           </i>
         </Button>
       </ButtonGroup>
+      {home && (
+        <Button
+          variant="contained"
+          style={{ display: "flex", justifyContent: "center", margin: "10px" }}
+          onClick={fetchPokemon}
+        >
+          Home
+        </Button>
+      )}
     </>
   );
 };
